@@ -32,6 +32,18 @@ const onwarn = (warning, onwarn) =>
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning)
 
+const preprocessOptions = {
+  transformers: {
+    postcss: {
+      plugins: [
+        require('postcss-import')(),
+        require('postcss-url')(),
+        require('autoprefixer')(),
+      ],
+    },
+  },
+}
+
 export default {
   client: {
     input: config.client.input(),
@@ -47,6 +59,7 @@ export default {
           dev,
           hydratable: true,
         },
+        preprocess: require('svelte-preprocess')(preprocessOptions),
       }),
       url({
         sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
@@ -108,6 +121,7 @@ export default {
           hydratable: true,
         },
         emitCss: false,
+        preprocess: require('svelte-preprocess')(preprocessOptions),
       }),
       url({
         sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
