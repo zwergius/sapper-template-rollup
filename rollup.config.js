@@ -33,14 +33,12 @@ const onwarn = (warning, onwarn) =>
   onwarn(warning)
 
 const preprocessOptions = {
-  transformers: {
-    postcss: {
-      plugins: [
-        require('postcss-import')(),
-        require('postcss-url')(),
-        require('autoprefixer')(),
-      ],
-    },
+  postcss: {
+    plugins: [
+      require('postcss-import')(),
+      require('postcss-url')(),
+      require('autoprefixer')(),
+    ],
   },
 }
 
