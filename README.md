@@ -1,6 +1,11 @@
 # sapper-template
 
-The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
+The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Uses Rollup
+++ eslint
+++ stylelint
+++ prettier
+++ autoprefixer
+++ css reset
 
 
 ## Getting started
@@ -11,7 +16,7 @@ The default template for setting up a [Sapper](https://github.com/sveltejs/sappe
 To create a new Sapper project based on Rollup locally, run
 
 ```bash
-npx degit "sveltejs/sapper-template#rollup" my-app
+npx degit "zwergius/sapper-template-rollup" my-app
 ```
 
 For a webpack-based project, instead run
