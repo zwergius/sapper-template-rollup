@@ -15,7 +15,6 @@ const dev = mode === 'development'
 const legacy = !!process.env.SAPPER_LEGACY_BUILD
 
 const aliases = alias({
-  resolve: ['.svelte', '.js'], //optional, by default this will just look for .js files or folders
   entries: [
     {
       find: '~',
